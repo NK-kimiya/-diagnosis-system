@@ -9,4 +9,4 @@ onnxruntime
 dotenv
 cloudinary
 psycopg2
-PIL
+Pillow
