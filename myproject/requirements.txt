@@ -8,3 +8,4 @@ onnx
 onnxruntime
 dotenv
 cloudinary
+psycopg2
