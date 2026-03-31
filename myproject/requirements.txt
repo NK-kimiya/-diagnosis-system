@@ -10,3 +10,4 @@ dotenv
 cloudinary
 psycopg2
 Pillow
+uvicorn
