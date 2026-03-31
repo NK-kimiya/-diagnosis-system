@@ -6,3 +6,4 @@ gunicorn
 whitenoise
 onnx
 onnxruntime
+dotenv
