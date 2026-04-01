@@ -1,19 +1,37 @@
-{% load static %} 
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'patient-create.css' %}">
-  <title>患者登録</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'patient-create.css' %}" />
+    <title>患者登録</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+
+    select {
+      width: 100%;
+    }
+  </style>
+  <body class="bg-light">
+    <div class="container mt-5 p-5">
+      <div class="col-12 col-md-6 mx-auto bg-white p-2 rounded-top shadow p-5">
+        <h2 class="text-center">Add Patient<br /><span>患者追加</span></h2>
+        <form method="post">
+          {% csrf_token %} {{ form.as_p }}
+          <button type="submit" class="btn btn-success">登録</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
-<h2>患者情報 登録</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">登録</button>
-</form>
